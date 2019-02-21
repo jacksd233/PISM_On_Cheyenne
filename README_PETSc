@@ -1,0 +1,52 @@
+This file tells how to install petsc
+ 
+ #*************************************************************
+ # Download
+ git clone -b maint https://bitbucket.org/petsc/petsc petsc
+ 
+ #*************************************************************
+ # Configure
+ 
+ ./configure --with-cc=mpicc --with-cxx=mpicxx --with-fc=0 --with-shared-libraries=1   #on 8/29/2018
+ ##configuration passed
+ ##xxx=========================================================================xxx
+ ## Configure stage complete. Now build PETSc libraries with (gnumake build):
+ ##    make PETSC_DIR=/gpfs/u/home/jweiwen/wji_apps/petsc PETSC_ARCH=arch-linux2-c-debug all
+ ##xxx=========================================================================xxx
+ ##use interactive batch to do make all test
+ qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
+ make all test
+ ## make all test completed but nothing in petsc/$PETSC_ARCH/bin
+ 
+ #         **** a successful installation on Cheyenne ****
+ # Download as the same 
+ 
+ # change .bashrc
+ module load intel/16.0.3
+ module load mkl/11.3.3
+ module load netcdf/4.5.0
+ export LD_LIBRARY_PATH="/glade/u/apps/ch/opt/netcdf/4.5.0/intel/16.0.3/lib:$LD_LIBRARY_PATH"
+ module load cmake/3.9.1
+ module load gsl/2.4
+ module load fftw3-mpi/3.3.6-pl2
+ #UDUNITS
+ export UDUNITS="/glade/u/apps/opt/udunits/2.1.24/intel/12.1.4"
+ export PATH="$UDUNITS/bin:$PATH"
+ export UDUNITS_INC="$UDUNITS/include"
+ export LD_LIBRARY_PATH="$UDUNITS/lib:$LD_LIBRARY_PATH"
+ # For the error of "ut_read_xml() failed"
+ export UDUNITS2_XML_PATH="$UDUNITS/share/udunits/udunits2.xml"
+ # python
+ export NOCONDA_PATH=$PATH
+ export PATH="/glade/u/apps/opt/anaconda3/bin:$PATH"
+ # NCO and Python Packages
+ module load nco/4.7.4
+ module load python/2.7.13
+ module load numpy/1.13.3
+ module load netcdf4-python/1.2.7
+ module load scipy/0.19.1
+ 
+ # configure
+ cd /your/PETSc/download/directory
+ /config/configure.py --with-shared-libraries --with-debugging=0 (--with-clanguage=cxx)
+ # be careful about the details of result
