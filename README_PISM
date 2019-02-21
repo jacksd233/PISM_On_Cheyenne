@@ -1,0 +1,17 @@
+ #            ***** This file tells how to build PISM *****
+ 
+ # please check README_petsc for how to install PETSc
+ 
+ # download
+ git clone git://github.com/pism/pism.git pism-stable
+ 
+ # cmake
+ mkdir ~/pism-stable/build
+ cd ~/pism-stable/build
+ PISM_INSTALL_PREFIX=~/pism CC=mpicc CXX=mpicxx cmake .. -DPETSC_EXECUTABLE_RUNS=ON # may get some   failed tests
+ make install -j 8
+ 
+ # change .bashrc
+ export PISM_DIR=$your_home_dir/$pism  #"/glade/u/home/jweiwen/pism"
+ export PATH="$PISM_DIR/bin:$PATH"
+ export LD_LIBRARY_PATH="$PISM_DIR/lib:$LD_LIBRARY_PATH"
