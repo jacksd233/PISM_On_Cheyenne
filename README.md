@@ -6,3 +6,9 @@ We need to install PETSc and other modules can be used directly. #Cheyenne has i
 # Install PETSc
 See the file: README_PETSc
 
+# Build PISM
+See the file: README_PISM
+
+# .bashrc
+See the file: bashrc
+
