@@ -16,7 +16,7 @@ This file tells how to install petsc
  ##use interactive batch to do make all test
  qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
  make all test
- ## make all test completed but nothing in petsc/$PETSC_ARCH/bin
+ ## make all test completed but nothing in petsc/$PETSC_ARCH/bin 
  
  #         **** a successful installation on Cheyenne ****
  # Download as the same 
@@ -50,3 +50,33 @@ This file tells how to install petsc
  cd /your/PETSc/download/directory
  /config/configure.py --with-shared-libraries --with-debugging=0 (--with-clanguage=cxx)
  # be careful about the details of result
+ 
+ #*************************************************************
+ # make 
+ #
+ # change to batch node
+ qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
+ 
+ # make all test as output of configuration
+ make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all check(test)
+ 
+ # leave batch node
+ exit
+ 
+ # add these to .bashrc
+ vi ~/.bashrc
+ export PETSC_DIR=$your_PETSC_dir_name #"/gpfs/u/home/jweiwen/wji_apps/petsc"
+ export PETSC_ARCH=$your_PETSC_arch_name #"arch-linux2-cxx-opt"
+ export PATH="$PETSC_DIR/$PETSC_ARCH/bin:$PATH"
+ export LD_LIBRARY_PATH="$PETSC_DIR/$PETSC_ARCH/lib:$LD_LIBRARY_PATH"
+ 
+ # log in again
+ exit
+ log in
+ 
+ # check the bin directory to see if the installation succeeds
+ #*************************************************************
+ 
+ # 8/31/2018 edited
+ 
+ # Try an earlier version of PETSc
