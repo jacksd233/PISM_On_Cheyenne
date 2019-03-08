@@ -1,0 +1,19 @@
+# Install fftw3-mpi
+ Download: http://www.fftw.org/download.html
+ 
+ # Configure
+ 
+ ./configure --prefix=.. -enable-shared --enable-static --enable-mpi
+ make -j 8
+ make install
+ 
+ 
+
+# Install udunits
+ Download: ftp://ftp.unidata.ucar.edu/pub/udunits/
+ 
+ # Configure and make
+ ./configure --prefix=/glade/u/home/jweiwen/wji_apps/udunits2 CC=mpicc
+ make check
+ make install
+ make clean
