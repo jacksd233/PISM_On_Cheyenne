@@ -3,12 +3,8 @@ This repository tells how to install PISM on Cheyenne
 
 We need to install PETSc and other modules can be used directly. #Cheyenne has its own PETSc but I can't use it for PISM.
 
-# Install PETSc
-See the file: README_PETSc
-
-# Build PISM
-See the file: README_PISM
-
-# .bashrc
-See the file: bashrc
+# Build_pism
+ See the file: `README_pism.md`
+ `bashrc_file` is the `.bashrc` for using PISM, the file may be invalid as Cheyenne changes.
+ 
 
