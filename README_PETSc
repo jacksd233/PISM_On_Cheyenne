@@ -7,16 +7,7 @@ This file tells how to install petsc
  #*************************************************************
  # Configure
  
- ./configure --with-cc=mpicc --with-cxx=mpicxx --with-fc=0 --with-shared-libraries=1   #on 8/29/2018
- ##configuration passed
- ##xxx=========================================================================xxx
- ## Configure stage complete. Now build PETSc libraries with (gnumake build):
- ##    make PETSC_DIR=/gpfs/u/home/jweiwen/wji_apps/petsc PETSC_ARCH=arch-linux2-c-debug all
- ##xxx=========================================================================xxx
- ##use interactive batch to do make all test
- qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
- make all test
- ## make all test completed but nothing in petsc/$PETSC_ARCH/bin 
+
  
  #         **** a successful installation on Cheyenne ****
  # Download as the same 
