@@ -1,5 +1,5 @@
 ## This file tells how to build prerequisites and pism on Cheyenne
- Last Modified by Weiwen Ji on Mar.8 2019 weiwen_ji@fas.harvard.edu
+``` Last Modified by Weiwen Ji on Mar.8 2019 weiwen_ji@fas.harvard.edu```
 
 ###   ===============   Load and Install Prerequisities   ===============
        
@@ -30,8 +30,8 @@
          
 ###   ===============   Build PISM   ===============
 
-   # Download
- ```  
+```
+   # Download  
    git clone git://github.com/pism/pism.git pism-stable
    mkdir ~/pism-stable/build
    cd ~/pism-stable/build
