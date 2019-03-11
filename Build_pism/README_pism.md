@@ -24,7 +24,7 @@
          # Configure
          CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c
 
-Mar.11 2019 
+`Mar.11 2019`
         Just use `./configure` to configure PETSc         
 
          # make
