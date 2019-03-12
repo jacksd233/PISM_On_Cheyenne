@@ -5,20 +5,21 @@
 
 `Mar.12 2019`  (http://pism-docs.org/sphinx/installation/pism.html?highlight=precise)
     
-    Add options to get reproducible model results:
+   Add options to get reproducible model results:
+   
     `export CFLAGS="-fp-model precise"`
     `export CXXFLAGS="-fp-model precise".` 
     
     
        
-    1). # Install fftw3-mpi
+   1). # Install fftw3-mpi
           Download: http://www.fftw.org/download.html
         # Configure
           ./configure --prefix=.. -enable-shared --enable-static --enable-mpi 
           make -j 8
           make install
 
-    2). # Install udunits2
+   2). # Install udunits2
           Download: ftp://ftp.unidata.ucar.edu/pub/udunits/
         # Configure and make
           ./configure --prefix=/glade/u/home/jweiwen/wji_apps/udunits2 CC=mpicc
@@ -26,7 +27,7 @@
           make install
           make clean
           
-     3). # Install PETSc
+   3). # Install PETSc
          # Download
          git clone -b maint https://bitbucket.org/petsc/petsc petsc
          # Configure
@@ -36,10 +37,10 @@
 `Mar.11 2019`
         Just use `./configure --with-debugging=0` to configure PETSc         
 
-         # make
-         qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
-         make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all
-         make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH check
+   # make
+     qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
+     make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all
+     make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH check
          
 ###   ===============   Build PISM   ===============
 
