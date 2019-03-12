@@ -2,6 +2,14 @@
 ``` Last Modified by Weiwen Ji on Mar.8 2019 weiwen_ji@fas.harvard.edu```
 
 ###   ===============   Load and Install Prerequisities   ===============
+
+`Mar.12 2019`  (http://pism-docs.org/sphinx/installation/pism.html?highlight=precise)
+    
+    Add options to get reproducible model results:
+    `export CFLAGS="-fp-model precise"`
+    `export CXXFLAGS="-fp-model precise".` 
+    
+    
        
     1). # Install fftw3-mpi
           Download: http://www.fftw.org/download.html
