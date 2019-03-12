@@ -25,7 +25,7 @@
          CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c
 
 `Mar.11 2019`
-        Just use `./configure` to configure PETSc         
+        Just use `./configure --with-debugging=0` to configure PETSc         
 
          # make
          qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
