@@ -15,7 +15,7 @@
     1). # Install fftw3-mpi
           Download: http://www.fftw.org/download.html
         # Configure
-          ./configure --prefix=.. -enable-shared --enable-static --enable-mpi 
+          ./configure --prefix=.. --enable-shared --enable-static --enable-mpi 
           make -j 8
           make install
 
