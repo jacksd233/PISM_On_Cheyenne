@@ -11,7 +11,15 @@
     `export CXXFLAGS="-fp-model precise".` 
     
 ### Begin Installation    
-       
+     
+      . # Install gsl-2.5
+          Download: https://www.gnu.org/software/gsl/
+        # Configure and build
+          ./configure --prefix=/home/yourname/gsl
+          make 
+          make check 
+          make install
+     
     1). # Install fftw3-mpi
           Download: http://www.fftw.org/download.html
         # Configure
