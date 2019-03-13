@@ -39,7 +39,7 @@
          # Download
          git clone -b maint https://bitbucket.org/petsc/petsc petsc
          # Configure
-         CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c
+         ~~CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c~~
          // The bin folder may be empty.
 
 `Mar.11 2019`
