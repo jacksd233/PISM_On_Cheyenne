@@ -45,10 +45,10 @@
 `Mar.11 2019`
         Just use `./configure --with-debugging=0` to configure PETSc         
 
-  ### make
-     qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
-     make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all
-     make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH check
+        # make PETSc
+          qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
+          make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all
+          make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH check
          
 ###   ===============   Build PISM   ===============
 
