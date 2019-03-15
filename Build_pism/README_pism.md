@@ -55,6 +55,9 @@
            --with-64-bit-indices=1 --known-64-bit-blas-indices
         the above configure run will create a binary conftest 
         
+        ./configure --with-batch --with-fc=0 \
+          --known-64-bit-blas-indices --with-64-bit-indices=1 -known-mpi-shared-libraries=1
+        
         Submit ./conftest-arch-linux2-c-debug to 1 processor of your batch system or system you are cross-compiling for; this will generate the file reconfigure-arch-linux2-c-debug.py 
         
         Run ./reconfigure-arch-linux2-c-debug.py (to complete the configure process).
