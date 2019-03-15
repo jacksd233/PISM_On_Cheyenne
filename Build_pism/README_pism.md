@@ -39,13 +39,28 @@
          # Download
          git clone -b maint https://bitbucket.org/petsc/petsc petsc
          # Configure
-         ~~CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c~~
-         // The bin folder may be empty.
+   ~~CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c~~
+    
 
 `Mar.11 2019`
-        Just use `./configure --with-debugging=0` to configure PETSc         
+        Just use `./configure --with-debugging=0` to configure PETSc
+ 
+`Mar.14 2019`
 
-        # make PETSc
+        PETSc built with batch. (https://www.mcs.anl.gov/petsc/documentation/installation.html)
+        
+        ./config/configure.py \
+           --with-fc=0 --with-batch --with-valgrind=1 --with-mpiexec="mpirun" \
+           --with-shared-libraries=1 -known-mpi-shared-libraries=1 \
+           --with-64-bit-indices=1 --known-64-bit-blas-indices
+        the above configure run will create a binary conftest 
+        
+        Submit ./conftest-arch-linux2-c-debug to 1 processor of your batch system or system you are cross-compiling for; this will generate the file reconfigure-arch-linux2-c-debug.py 
+        
+        Run ./reconfigure-arch-linux2-c-debug.py (to complete the configure process).
+
+   make PETSc
+   
           qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
           make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all
           make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH check
