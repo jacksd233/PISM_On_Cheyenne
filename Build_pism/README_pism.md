@@ -64,7 +64,7 @@
             --with-64-bit-indices=1 \
             --known-64-bit-blas-indices \
             --known-mpi-shared-libraries=1 \
-            --with-debugging=1 \
+            --with-debugging=0 \
             --with-valgrind=1 \
             --with-batch=1  \
             --with-shared-libraries=1 \
