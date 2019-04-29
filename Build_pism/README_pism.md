@@ -90,5 +90,14 @@
    cd ~/pism-stable/build
    PISM_INSTALL_PREFIX=~/pism CC=mpicc CXX=mpicxx cmake .. -DPETSC_EXECUTABLE_RUNS=ON
    # May have some failed tests
+
+Apr.29 
+   # Turn on Proj4
+   make edit_cache
+   Turn on 'Pism_USE_PROJ4' Press "c" "c" "g"
+   make
+
    make install -j 8
+ 
  ```
+ 
