@@ -1,0 +1,13 @@
+2019.5.6
+  Ice Volume twice larger with the new polar stereographic domain. 
+  
+   Reasons:
+     1. Domian Area is twice larger now (Matlab land_area_comparsion.m).
+     2. Ice thickness is higher (~4800m for Ice6g and ~6800m for us).
+   
+   Ideas:
+     1. choose a larger value of sia_e (Now use 3.0, try 4.5, which is used for Antarctic).
+     2. try a smaller lapse rate (Now use -9.8 deg C/km, try -6.5 (or 7) deg C/km).
+     3. try tillphi from 5 to 40 (Aschwanden, Fahnestock, Truffer, 2016). 
+     
+   Overall, we need to decrease the ice thickness to get a more realistic ice volume
