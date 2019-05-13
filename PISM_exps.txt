@@ -10,4 +10,16 @@
      2. try a smaller lapse rate (Now use -9.8 deg C/km, try -6.5 (or 7) deg C/km).
      3. try tillphi from 5 to 40 (Aschwanden, Fahnestock, Truffer, 2016). 
      
-   Overall, we need to decrease the ice thickness to get a more realistic ice volume
+   Overall, we need to decrease the ice thickness to get a more realistic ice volume.
+ 
+ 
+ 
+ 2019.5.13
+   PISM WARNING:  KSPSolve() reports 'diverged'; reason = -3 = 'DIVERGED_ITS'
+  writing linear system to PETSc binary file SSAFD_kspdivergederror.petsc ...
+   Add options:
+   -pik
+   -ssafd_ksp_type gmres -ssafd_ksp_norm_type unpreconditioned 
+   -ssafd_ksp_pc_side right -ssafd_pc_type asm -ssafd_sub_pc_type lu
+   
+   (reference:http://www.pism-docs.org/wiki/doku.php?id=kspdiverged)
