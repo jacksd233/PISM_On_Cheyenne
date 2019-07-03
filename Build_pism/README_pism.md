@@ -19,6 +19,7 @@
           make 
           make check 
           make install
+          make clean
      
     1). # Install fftw3-mpi
           Download: http://www.fftw.org/download.html
@@ -26,6 +27,7 @@
           ./configure --prefix=.. --enable-shared --enable-static --enable-mpi 
           make -j 8
           make install
+          make clean
 
     2). # Install udunits2
           Download: ftp://ftp.unidata.ucar.edu/pub/udunits/
