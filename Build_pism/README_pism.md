@@ -70,7 +70,8 @@
             --with-valgrind=1 \
             --with-batch=1  \
             --with-shared-libraries=1 \
-            --with-mpiexec="mpirun"
+            --with-mpiexec="mpirun" \
+            --download-f2cblaslapack=1
         
         
         Submit ./conftest-arch-linux2-c-debug to 1 processor of your batch system or system you are cross-compiling for; this will generate the file reconfigure-arch-linux2-c-debug.py 
