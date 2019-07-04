@@ -91,6 +91,13 @@
    git clone git://github.com/pism/pism.git pism-stable
    mkdir ~/pism-stable/build
    cd ~/pism-stable/build
+   
+   7/3/2019
+   Add "if (POLICY CMP0074)
+          cmake_policy(SET CMP0074 NEW) # CMake 3.12
+        endif ()"
+   in CMakeList.txt  
+   
    PISM_INSTALL_PREFIX=~/pism CC=mpicc CXX=mpicxx cmake .. -DPETSC_EXECUTABLE_RUNS=ON
    # May have some failed tests
 
