@@ -108,6 +108,12 @@ Apr.29
    make
 
    make install -j 8
- 
+   
+   do 
+   make
+   make install
+   everytime changes something in the source code
+
  ```
  
+
