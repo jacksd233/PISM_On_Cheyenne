@@ -39,7 +39,7 @@
           
     3). # Install PETSc
          # Download
-         git clone -b maint https://bitbucket.org/petsc/petsc petsc
+         git clone -b maint https://gitlab.com/petsc/petsc petsc
          # Configure
    ~~CC=mpicc CXX=mpicxx ./config/configure.py --with-shared-libraries --with-debugging=0 --with-fc=0 --with-clanguage=c~~
     
