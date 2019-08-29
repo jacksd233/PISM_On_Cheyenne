@@ -99,6 +99,7 @@
    in CMakeList.txt  
    
    PISM_INSTALL_PREFIX=~/pism CC=mpicc CXX=mpicxx cmake .. -DPETSC_EXECUTABLE_RUNS=ON
+   PISM_INSTALL_PREFIX=~/pism CC=mpiicc CXX=mpiicpc cmake .. -DPETSC_EXECUTABLE_RUNS=ON
    # May have some failed tests
 
 Apr.29 
