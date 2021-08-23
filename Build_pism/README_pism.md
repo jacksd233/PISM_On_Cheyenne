@@ -1,5 +1,5 @@
 ## This file tells how to build prerequisites and pism on Cheyenne
-``` Last Modified by Weiwen Ji on Mar.8 2019 weiwen_ji@fas.harvard.edu```
+``` Last Modified by Weiwen Ji on Mar.8 2019 wwji@pku.edu.cn```
 
 ###   ===============   Load and Install Prerequisities   ===============
 
@@ -80,7 +80,7 @@
 
    make PETSc
    
-          qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHAR0005
+          qsub -I -l select=1:ncpus=8:mpiprocs=8 -l walltime=10:00:00 -q regular -A UHARXXXX
           make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH all
           make PETSC_DIR=$PETSC_DIR PETSC_ARCH=$PETSC_ARCH check
          
